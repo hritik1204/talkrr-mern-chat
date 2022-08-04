@@ -12,7 +12,8 @@ import "./styles.css"
 
 
 
-   const  ENDPOINT = "https://mern-talkrr.herokuapp.com/";
+  //  const  ENDPOINT = "https://talkrr-chat-app.herokuapp.com/add";
+   const  ENDPOINT = "http://127.0.0.1:5000";
    var socket, selectedChatCompare;
 
 const SingleChat = ({fetchAgain, setFetchAgain}) => {
@@ -222,8 +223,8 @@ const sendMessage = async (event) => {
                     )}
 
                     <FormControl onKeyDown={sendMessage} isRequired mt={3}>
-                    {isTyping ? <div> 
-                         typing
+                    {isTyping ? <div style={{color: "black"}}> 
+                         typing...
                       </div> : (<> </>) }
                       <Input
                         variant="filled"

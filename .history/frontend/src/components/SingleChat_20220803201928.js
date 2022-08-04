@@ -7,14 +7,12 @@ import { getSender, getSenderFull } from '../config/ChatLogics';
 import ProfileModel from './miscellaneous/ProfileModel';
 import UpdateGroupChatModal from './miscellaneous/UpdateGroupChatModal';
 import ScrollableChat from './ScrollableChat';
-// import animationData from "../animations/typing.json"
 import axios from 'axios';
 import "./styles.css"
 
 
 
-
-const ENDPOINT = "https://mern-talkrr.herokuapp.com/";
+const ENDPOINT = "https://talkrr-chat-app.herokuapp.com/add";
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
@@ -231,8 +229,9 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                     <
                     FormControl onKeyDown = { sendMessage }
                     isRequired mt = { 3 } > {
-                        isTyping ? < div >
-                        Typing... <
+                        isTyping ? < div style = {
+                            { color: "black" } } >
+                        typing... <
                         /div> : (<> </ > )
                 } <
                 Input
